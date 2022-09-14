@@ -43,7 +43,7 @@ namespace Trabalho1
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void buttonAdicionar_Click(object sender, EventArgs e)
         {
             switch (comboBoxTipoProduto.SelectedItem)
             {

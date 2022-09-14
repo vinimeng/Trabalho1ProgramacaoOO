@@ -45,7 +45,7 @@
             this.numericPorcentagemDepreciacao = new System.Windows.Forms.NumericUpDown();
             this.labelDeprecicao = new System.Windows.Forms.Label();
             this.checkBoxLinhaBranca = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAdicionar = new System.Windows.Forms.Button();
             this.groupBoxResultados = new System.Windows.Forms.GroupBox();
             this.richTextBoxProdutos = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericCusto)).BeginInit();
@@ -58,9 +58,10 @@
             // labelTipoProduto
             // 
             this.labelTipoProduto.AutoSize = true;
-            this.labelTipoProduto.Location = new System.Drawing.Point(12, 9);
+            this.labelTipoProduto.Location = new System.Drawing.Point(9, 7);
+            this.labelTipoProduto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTipoProduto.Name = "labelTipoProduto";
-            this.labelTipoProduto.Size = new System.Drawing.Size(103, 16);
+            this.labelTipoProduto.Size = new System.Drawing.Size(82, 13);
             this.labelTipoProduto.TabIndex = 0;
             this.labelTipoProduto.Text = "Tipo do produto";
             // 
@@ -71,50 +72,56 @@
             "Alimento",
             "Eletrodoméstico",
             "Produto"});
-            this.comboBoxTipoProduto.Location = new System.Drawing.Point(15, 28);
+            this.comboBoxTipoProduto.Location = new System.Drawing.Point(11, 23);
+            this.comboBoxTipoProduto.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTipoProduto.Name = "comboBoxTipoProduto";
-            this.comboBoxTipoProduto.Size = new System.Drawing.Size(207, 24);
+            this.comboBoxTipoProduto.Size = new System.Drawing.Size(156, 21);
             this.comboBoxTipoProduto.TabIndex = 1;
             this.comboBoxTipoProduto.SelectedIndexChanged += new System.EventHandler(this.comboBoxTipoProduto_SelectedIndexChanged);
             // 
             // labelNome
             // 
             this.labelNome.AutoSize = true;
-            this.labelNome.Location = new System.Drawing.Point(12, 55);
+            this.labelNome.Location = new System.Drawing.Point(9, 45);
+            this.labelNome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNome.Name = "labelNome";
-            this.labelNome.Size = new System.Drawing.Size(44, 16);
+            this.labelNome.Size = new System.Drawing.Size(35, 13);
             this.labelNome.TabIndex = 2;
             this.labelNome.Text = "Nome";
             // 
             // textBoxNome
             // 
-            this.textBoxNome.Location = new System.Drawing.Point(15, 74);
+            this.textBoxNome.Location = new System.Drawing.Point(11, 60);
+            this.textBoxNome.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(207, 22);
+            this.textBoxNome.Size = new System.Drawing.Size(156, 20);
             this.textBoxNome.TabIndex = 3;
             // 
             // textBoxCodigoBarras
             // 
-            this.textBoxCodigoBarras.Location = new System.Drawing.Point(15, 118);
+            this.textBoxCodigoBarras.Location = new System.Drawing.Point(11, 96);
+            this.textBoxCodigoBarras.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCodigoBarras.Name = "textBoxCodigoBarras";
-            this.textBoxCodigoBarras.Size = new System.Drawing.Size(207, 22);
+            this.textBoxCodigoBarras.Size = new System.Drawing.Size(156, 20);
             this.textBoxCodigoBarras.TabIndex = 5;
             // 
             // labelCodigoBarras
             // 
             this.labelCodigoBarras.AutoSize = true;
-            this.labelCodigoBarras.Location = new System.Drawing.Point(12, 99);
+            this.labelCodigoBarras.Location = new System.Drawing.Point(9, 80);
+            this.labelCodigoBarras.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCodigoBarras.Name = "labelCodigoBarras";
-            this.labelCodigoBarras.Size = new System.Drawing.Size(112, 16);
+            this.labelCodigoBarras.Size = new System.Drawing.Size(87, 13);
             this.labelCodigoBarras.TabIndex = 4;
             this.labelCodigoBarras.Text = "Código de barras";
             // 
             // labelCusto
             // 
             this.labelCusto.AutoSize = true;
-            this.labelCusto.Location = new System.Drawing.Point(12, 143);
+            this.labelCusto.Location = new System.Drawing.Point(9, 116);
+            this.labelCusto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCusto.Name = "labelCusto";
-            this.labelCusto.Size = new System.Drawing.Size(69, 16);
+            this.labelCusto.Size = new System.Drawing.Size(57, 13);
             this.labelCusto.TabIndex = 6;
             this.labelCusto.Text = "Custo (R$)";
             // 
@@ -126,14 +133,15 @@
             0,
             0,
             131072});
-            this.numericCusto.Location = new System.Drawing.Point(15, 162);
+            this.numericCusto.Location = new System.Drawing.Point(11, 132);
+            this.numericCusto.Margin = new System.Windows.Forms.Padding(2);
             this.numericCusto.Maximum = new decimal(new int[] {
             1215752192,
             23,
             0,
             0});
             this.numericCusto.Name = "numericCusto";
-            this.numericCusto.Size = new System.Drawing.Size(207, 22);
+            this.numericCusto.Size = new System.Drawing.Size(155, 20);
             this.numericCusto.TabIndex = 7;
             // 
             // numericPorcentagemImposto
@@ -144,22 +152,24 @@
             0,
             0,
             131072});
-            this.numericPorcentagemImposto.Location = new System.Drawing.Point(15, 206);
+            this.numericPorcentagemImposto.Location = new System.Drawing.Point(11, 167);
+            this.numericPorcentagemImposto.Margin = new System.Windows.Forms.Padding(2);
             this.numericPorcentagemImposto.Maximum = new decimal(new int[] {
             1215752192,
             23,
             0,
             0});
             this.numericPorcentagemImposto.Name = "numericPorcentagemImposto";
-            this.numericPorcentagemImposto.Size = new System.Drawing.Size(207, 22);
+            this.numericPorcentagemImposto.Size = new System.Drawing.Size(155, 20);
             this.numericPorcentagemImposto.TabIndex = 9;
             // 
             // labelImposto
             // 
             this.labelImposto.AutoSize = true;
-            this.labelImposto.Location = new System.Drawing.Point(12, 187);
+            this.labelImposto.Location = new System.Drawing.Point(9, 152);
+            this.labelImposto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelImposto.Name = "labelImposto";
-            this.labelImposto.Size = new System.Drawing.Size(78, 16);
+            this.labelImposto.Size = new System.Drawing.Size(61, 13);
             this.labelImposto.TabIndex = 8;
             this.labelImposto.Text = "Imposto (%)";
             // 
@@ -171,22 +181,24 @@
             0,
             0,
             131072});
-            this.numericPorcentagemLucro.Location = new System.Drawing.Point(15, 250);
+            this.numericPorcentagemLucro.Location = new System.Drawing.Point(11, 203);
+            this.numericPorcentagemLucro.Margin = new System.Windows.Forms.Padding(2);
             this.numericPorcentagemLucro.Maximum = new decimal(new int[] {
             1215752192,
             23,
             0,
             0});
             this.numericPorcentagemLucro.Name = "numericPorcentagemLucro";
-            this.numericPorcentagemLucro.Size = new System.Drawing.Size(207, 22);
+            this.numericPorcentagemLucro.Size = new System.Drawing.Size(155, 20);
             this.numericPorcentagemLucro.TabIndex = 11;
             // 
             // labelLucro
             // 
             this.labelLucro.AutoSize = true;
-            this.labelLucro.Location = new System.Drawing.Point(12, 231);
+            this.labelLucro.Location = new System.Drawing.Point(9, 188);
+            this.labelLucro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLucro.Name = "labelLucro";
-            this.labelLucro.Size = new System.Drawing.Size(63, 16);
+            this.labelLucro.Size = new System.Drawing.Size(51, 13);
             this.labelLucro.TabIndex = 10;
             this.labelLucro.Text = "Lucro (%)";
             // 
@@ -195,17 +207,19 @@
             this.dateTimePickerDataValidade.Checked = false;
             this.dateTimePickerDataValidade.Enabled = false;
             this.dateTimePickerDataValidade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDataValidade.Location = new System.Drawing.Point(15, 294);
+            this.dateTimePickerDataValidade.Location = new System.Drawing.Point(11, 239);
+            this.dateTimePickerDataValidade.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerDataValidade.Name = "dateTimePickerDataValidade";
-            this.dateTimePickerDataValidade.Size = new System.Drawing.Size(207, 22);
+            this.dateTimePickerDataValidade.Size = new System.Drawing.Size(156, 20);
             this.dateTimePickerDataValidade.TabIndex = 12;
             // 
             // labelDataValidade
             // 
             this.labelDataValidade.AutoSize = true;
-            this.labelDataValidade.Location = new System.Drawing.Point(12, 275);
+            this.labelDataValidade.Location = new System.Drawing.Point(9, 223);
+            this.labelDataValidade.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDataValidade.Name = "labelDataValidade";
-            this.labelDataValidade.Size = new System.Drawing.Size(111, 16);
+            this.labelDataValidade.Size = new System.Drawing.Size(88, 13);
             this.labelDataValidade.TabIndex = 13;
             this.labelDataValidade.Text = "Data de validade";
             // 
@@ -218,22 +232,24 @@
             0,
             0,
             131072});
-            this.numericPorcentagemDepreciacao.Location = new System.Drawing.Point(15, 338);
+            this.numericPorcentagemDepreciacao.Location = new System.Drawing.Point(11, 275);
+            this.numericPorcentagemDepreciacao.Margin = new System.Windows.Forms.Padding(2);
             this.numericPorcentagemDepreciacao.Maximum = new decimal(new int[] {
             1215752192,
             23,
             0,
             0});
             this.numericPorcentagemDepreciacao.Name = "numericPorcentagemDepreciacao";
-            this.numericPorcentagemDepreciacao.Size = new System.Drawing.Size(207, 22);
+            this.numericPorcentagemDepreciacao.Size = new System.Drawing.Size(155, 20);
             this.numericPorcentagemDepreciacao.TabIndex = 15;
             // 
             // labelDeprecicao
             // 
             this.labelDeprecicao.AutoSize = true;
-            this.labelDeprecicao.Location = new System.Drawing.Point(12, 319);
+            this.labelDeprecicao.Location = new System.Drawing.Point(9, 259);
+            this.labelDeprecicao.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDeprecicao.Name = "labelDeprecicao";
-            this.labelDeprecicao.Size = new System.Drawing.Size(109, 16);
+            this.labelDeprecicao.Size = new System.Drawing.Size(85, 13);
             this.labelDeprecicao.TabIndex = 14;
             this.labelDeprecicao.Text = "Depreciação (%)";
             // 
@@ -241,50 +257,55 @@
             // 
             this.checkBoxLinhaBranca.AutoSize = true;
             this.checkBoxLinhaBranca.Enabled = false;
-            this.checkBoxLinhaBranca.Location = new System.Drawing.Point(15, 367);
+            this.checkBoxLinhaBranca.Location = new System.Drawing.Point(11, 298);
+            this.checkBoxLinhaBranca.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxLinhaBranca.Name = "checkBoxLinhaBranca";
-            this.checkBoxLinhaBranca.Size = new System.Drawing.Size(106, 20);
+            this.checkBoxLinhaBranca.Size = new System.Drawing.Size(88, 17);
             this.checkBoxLinhaBranca.TabIndex = 16;
             this.checkBoxLinhaBranca.Text = "Linha branca";
             this.checkBoxLinhaBranca.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // buttonAdicionar
             // 
-            this.button1.Location = new System.Drawing.Point(15, 393);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(207, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Adicionar produto";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.buttonAdicionar.Location = new System.Drawing.Point(11, 319);
+            this.buttonAdicionar.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAdicionar.Name = "buttonAdicionar";
+            this.buttonAdicionar.Size = new System.Drawing.Size(155, 19);
+            this.buttonAdicionar.TabIndex = 17;
+            this.buttonAdicionar.Text = "Adicionar produto";
+            this.buttonAdicionar.UseVisualStyleBackColor = true;
+            this.buttonAdicionar.Click += new System.EventHandler(this.buttonAdicionar_Click);
             // 
             // groupBoxResultados
             // 
             this.groupBoxResultados.Controls.Add(this.richTextBoxProdutos);
-            this.groupBoxResultados.Location = new System.Drawing.Point(229, 9);
+            this.groupBoxResultados.Location = new System.Drawing.Point(172, 7);
+            this.groupBoxResultados.Margin = new System.Windows.Forms.Padding(2);
             this.groupBoxResultados.Name = "groupBoxResultados";
-            this.groupBoxResultados.Size = new System.Drawing.Size(245, 407);
+            this.groupBoxResultados.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBoxResultados.Size = new System.Drawing.Size(184, 331);
             this.groupBoxResultados.TabIndex = 18;
             this.groupBoxResultados.TabStop = false;
             this.groupBoxResultados.Text = "Produtos cadastrados";
             // 
             // richTextBoxProdutos
             // 
-            this.richTextBoxProdutos.Location = new System.Drawing.Point(7, 19);
+            this.richTextBoxProdutos.Location = new System.Drawing.Point(5, 15);
+            this.richTextBoxProdutos.Margin = new System.Windows.Forms.Padding(2);
             this.richTextBoxProdutos.Name = "richTextBoxProdutos";
             this.richTextBoxProdutos.ReadOnly = true;
             this.richTextBoxProdutos.ShortcutsEnabled = false;
-            this.richTextBoxProdutos.Size = new System.Drawing.Size(232, 382);
+            this.richTextBoxProdutos.Size = new System.Drawing.Size(175, 311);
             this.richTextBoxProdutos.TabIndex = 0;
             this.richTextBoxProdutos.Text = "";
             // 
             // FormularioPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 428);
+            this.ClientSize = new System.Drawing.Size(367, 354);
             this.Controls.Add(this.groupBoxResultados);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonAdicionar);
             this.Controls.Add(this.checkBoxLinhaBranca);
             this.Controls.Add(this.numericPorcentagemDepreciacao);
             this.Controls.Add(this.labelDeprecicao);
@@ -302,10 +323,11 @@
             this.Controls.Add(this.labelNome);
             this.Controls.Add(this.comboBoxTipoProduto);
             this.Controls.Add(this.labelTipoProduto);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(505, 475);
+            this.MaximumSize = new System.Drawing.Size(383, 393);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(505, 475);
+            this.MinimumSize = new System.Drawing.Size(383, 393);
             this.Name = "FormularioPrincipal";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -339,7 +361,7 @@
         private System.Windows.Forms.NumericUpDown numericPorcentagemDepreciacao;
         private System.Windows.Forms.Label labelDeprecicao;
         private System.Windows.Forms.CheckBox checkBoxLinhaBranca;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAdicionar;
         private System.Windows.Forms.GroupBox groupBoxResultados;
         private System.Windows.Forms.RichTextBox richTextBoxProdutos;
     }

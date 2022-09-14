@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CD857843-4391-4584-ACF6-3DF6633246D5}</ProjectGuid>
+    <ProjectGuid>{4C534D9E-6CA6-4453-AC2F-50B293C53867}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Exercicio2</RootNamespace>
-    <AssemblyName>Exercicio2</AssemblyName>
+    <RootNamespace>Exercicio3</RootNamespace>
+    <AssemblyName>Exercicio3</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,17 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Circulo.cs" />
     <Compile Include="FormularioPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormularioPrincipal.Designer.cs">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Imovel.cs" />
-    <Compile Include="Novo.cs" />
+    <Compile Include="Forma.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Velho.cs" />
+    <Compile Include="Quadrado.cs" />
+    <Compile Include="Retangulo.cs" />
     <EmbeddedResource Include="FormularioPrincipal.resx">
       <DependentUpon>FormularioPrincipal.cs</DependentUpon>
     </EmbeddedResource>
