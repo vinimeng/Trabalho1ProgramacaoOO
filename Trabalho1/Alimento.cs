@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,13 +18,14 @@ namespace Trabalho1
         }
 
         public Alimento(
+            string nome,
             string codigoBarras,
             double custo,
             double porcentagemImposto,
             double porcentagemMargemLucro,
             DateTime dataDeValidade,
             double porcentagemDepreciacao
-        ) : base(codigoBarras, custo, porcentagemImposto,porcentagemMargemLucro)
+        ) : base(nome, codigoBarras, custo, porcentagemImposto,porcentagemMargemLucro)
         {
             DataDeValidade = dataDeValidade;
             PorcentagemDepreciacao = porcentagemDepreciacao;
@@ -34,7 +36,7 @@ namespace Trabalho1
             double precoSemDepreciacao = base.CalcularPreco();
             double multiplicadorDepreciacao = PorcentagemDepreciacao / 100.0;
 
-            int quantosDiasParaVencer = (DataDeValidade - DateTime.Today).Days;
+            int quantosDiasParaVencer = (DataDeValidade.Date - DateTime.Today.Date).Days;
             int quantasVezesMultiplicarDepreciacao = 0;
             bool zerar = false;
 
@@ -76,5 +78,12 @@ namespace Trabalho1
             return precoFinal;
         }
 
+        public override string ToString()
+        {
+            return base.ToString() + "\n" +
+                "Tipo: Alimento\n" +
+                "Data de validade: " + DataDeValidade.ToString("d") + "\n" +
+                "% depreciação: " + PorcentagemDepreciacao.ToString(CultureInfo.CurrentCulture) + "%";
+        }
     }
 }

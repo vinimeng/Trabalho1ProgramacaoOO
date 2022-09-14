@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,12 +17,13 @@ namespace Trabalho1
         }
 
         public Eletrodomestico(
+            string nome,
             string codigoBarras,
             double custo,
             double porcentagemImposto,
             double porcentagemMargemLucro,
             bool linhaBranca
-        ) : base(codigoBarras, custo, porcentagemImposto, porcentagemMargemLucro)
+        ) : base(nome, codigoBarras, custo, porcentagemImposto, porcentagemMargemLucro)
         {
             LinhaBranca = linhaBranca;
         }
@@ -42,6 +44,13 @@ namespace Trabalho1
             }
 
             return precoFinal;
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + "\n" +
+                "Tipo: Eletrodoméstico\n" +
+                "Linha branca: " + (LinhaBranca ? "Sim" : "Não");
         }
     }
 }
